@@ -374,6 +374,7 @@
   .project-grid--single .project-card-content {
     padding: 1.25em;
   }
+  .nav-toggle { display: inline-flex; }
 }
 
 @media (max-width: 620px) {
