@@ -12,8 +12,8 @@ Site.renderGalleries = async function(project) {
         caption: Site.pick(img.caption),
         alt: Site.pick(img.alt) || Site.pick(img.caption) || Site.pick(gallery.title)
       }));
-      const thumbs = images.map((img, index) => `<button class="gallery-thumb" type="button" data-gallery-index="${blocks.length}" data-image-index="${index}" aria-label="Otwórz zdjęcie ${index + 1}"><img src="${img.thumb}" alt="${Site.escapeHTML(img.alt)}" loading="lazy" onerror="this.remove(); this.parentElement.innerHTML='<span class=gallery-placeholder>Miniatura</span>';" /></button>`).join('');
-      blocks.push({ title: Site.pick(gallery.title), description: Site.pick(gallery.description), images, html: `<section class="section"><h2>${Site.escapeHTML(Site.pick(gallery.title))}</h2><p>${Site.escapeHTML(Site.pick(gallery.description))}</p><div class="gallery-grid">${thumbs}</div></section>` });
+      const thumbs = images.map((img, index) => `<figure class="gallery-item"> <button class="gallery-thumb" type="button" data-gallery-index="${blocks.length}" data-image-index="${index}" aria-label="Otwórz zdjęcie ${index + 1}"><img src="${img.thumb}" alt="${Site.escapeHTML(img.alt)}" loading="lazy" onerror="this.remove(); this.parentElement.innerHTML='<span class=gallery-placeholder>Miniatura</span>';" /></button> ${ img.caption ? `<figcaption class="gallery-caption">${Site.escapeHTML(img.caption)}</figcaption>` : "" }</figure>`).join('');
+      blocks.push({ title: Site.pick(gallery.title), description: Site.pick(gallery.description), images, html: `<section class="section gallery-section"><h2>${Site.escapeHTML(Site.pick(gallery.title))}</h2><p>${Site.escapeHTML(Site.pick(gallery.description))}</p><div class="gallery-grid">${thumbs}</div></section>` });
     } catch (error) { console.warn(error); }
   }
   Site.currentGalleries = blocks;

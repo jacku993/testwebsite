@@ -3,9 +3,10 @@
   Site.applyFontSize();
   await Site.loadI18n();
 
-  if (Site.renderHomeHero) {
+  if (typeof Site.renderHomeHero === "function") {
     await Site.renderHomeHero();
   }
+  
   let siteConfig = { features: { settingsMenu: true, languageSwitcher: true, themeSwitcher: true, fontSizeSwitcher: true } };
   try {
     siteConfig = await Site.getJSON('data/site-config.json');

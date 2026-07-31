@@ -2,29 +2,29 @@ Site.renderProjectDetail = async function() {
   const root = document.getElementById('project-detail');
   if (!root) return;
   const params = new URLSearchParams(location.search);
-  const id = params.get('id');
-  if (!id) { root.innerHTML = '<p>Nie podano identyfikatora projektu.</p><a class="button primary" href="realizacje.html">Wróć do portfolio</a>'; return; }
+  const id = params.get("id");
+  if (!id) { root.innerHTML = '<div class="empty-state"><h2>Nie podano identyfikatora projektu.</h2><a class="button primary" href="realizacje.html">Wróć do portfolio</a></div>'; return; }
   let project;
   try { project = await Site.loadProject(id); }
-  catch(error) { console.warn(error); root.innerHTML = '<p>Nie znaleziono projektu.</p><a class="button primary" href="realizacje.html">Wróć do portfolio</a>'; return; }
+  catch(error) { console.warn(error); root.innerHTML = '<div class="empty-state"><h2>Nie znaleziono projektu.</h2><a class="button primary" href="realizacje.html">Wróć do portfolio</a></div>'; return; }
 
-  let description = '';
+  let description = "";
   const descFile = Site.pick(project.description);
   if (descFile) {
     try { description = Site.mdToHTML(await Site.getText(`projects/${id}/${descFile}`)); }
     catch(error) { console.warn(error); }
   }
-  const scope = (project.scopeOfWork || []).map(item => `<li>${Site.escapeHTML(Site.pick(item))}</li>`).join('');
-  const services = (project.services || []).map(s => `<li>${Site.escapeHTML(Site.serviceTitleById[s] || s)}</li>`).join('');
+  const scope = (project.scopeOfWork || []).map(item => `<li>${Site.escapeHTML(Site.pick(item))}</li>`).join("");
+  const services = (project.services || []).map(s => `<li>${Site.escapeHTML(Site.serviceTitleById[s] || s)}</li>`).join("");
 
   root.innerHTML = `
     <article class="detail-card">
-      <p class="eyebrow">${Site.escapeHTML(project.type || '')}</p>
+      <p class="eyebrow">${Site.escapeHTML(project.type || "")}</p>
       <h1>${Site.escapeHTML(Site.pick(project.title))}</h1>
       <p class="lead">${Site.escapeHTML(Site.pick(project.summary))}</p>
-      <p class="meta">${Site.escapeHTML(project.location || '')} ${project.year ? ' | ' + Site.escapeHTML(project.year) : ''}</p>
-      ${project.role ? `<h2>${Site.escapeHTML(Site.i18n.dict['project.role'] || 'Rola naszej firmy')}</h2><p>${Site.escapeHTML(Site.pick(project.role))}</p>` : ''}
-      ${scope ? `<h2>${Site.escapeHTML(Site.i18n.dict['project.scope'] || 'Zakres prac wykonanych przez naszą firmę')}</h2><ul class="scope-list">${scope}</ul>` : ''}
+      <p class="meta">${Site.escapeHTML(project.location || "")} ${project.year ? " | " + Site.escapeHTML(project.year) : ""}</p>
+      ${project.role ? `<h2>${Site.escapeHTML(Site.i18n.dict["project.role"] || "Rola naszej firmy")}</h2><p>${Site.escapeHTML(Site.pick(project.role))}</p>` : ""}
+      ${scope ? `<h2>${Site.escapeHTML(Site.i18n.dict['project.scope'] || 'Zakres prac wykonanych przez naszą firmę')}</h2><ul class="scope-list">${scope}</ul>` : ""}
       ${services ? `<h2>${Site.escapeHTML(Site.i18n.dict['project.services'] || 'Powiązane usługi')}</h2><ul>${services}</ul>` : ''}
       <div class="markdown-content">${description}</div>
     </article>

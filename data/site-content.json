@@ -1,6 +1,7 @@
 {
   "home": {
     "hero": {
+      "mode": "custom",
       "image": "assets/images/hero/homepage.jpg",
       "alt": {
         "pl": "Budynek mieszkalny w trakcie realizacji",
