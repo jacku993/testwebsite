@@ -1,0 +1,11 @@
+{
+  "home": {
+    "hero": {
+      "image": "assets/images/hero/homepage.jpg",
+      "alt": {
+        "pl": "Budynek mieszkalny w trakcie realizacji",
+        "en": "Residential building during construction"
+      }
+    }
+  }
+}

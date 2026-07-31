@@ -1,0 +1,8 @@
+{
+  "features": {
+    "settingsMenu": true,
+    "languageSwitcher": true,
+    "themeSwitcher": true,
+    "fontSizeSwitcher": true
+  }
+}

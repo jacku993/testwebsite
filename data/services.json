@@ -1,0 +1,54 @@
+[
+  {
+    "id": "single-family-houses",
+    "title": {
+      "pl": "Budowa domów jednorodzinnych",
+      "en": "Construction of single-family houses"
+    },
+    "description": {
+      "pl": "Realizacja prac budowlanych w ustalonym zakresie.",
+      "en": "Construction works delivered according to the agreed scope."
+    },
+    "featured": true,
+    "order": 10
+  },
+  {
+    "id": "multi-family-buildings",
+    "title": {
+      "pl": "Budynki wielorodzinne",
+      "en": "Multi-family buildings"
+    },
+    "description": {
+      "pl": "Udział w projektach budynków mieszkalnych i wielorodzinnych.",
+      "en": "Participation in residential and multi-family building projects."
+    },
+    "featured": true,
+    "order": 20
+  },
+  {
+    "id": "reinforced-concrete-works",
+    "title": {
+      "pl": "Prace żelbetowe",
+      "en": "Reinforced concrete works"
+    },
+    "description": {
+      "pl": "Wykonanie elementów konstrukcyjnych zgodnie z dokumentacją projektową.",
+      "en": "Construction of structural elements according to project documentation."
+    },
+    "featured": true,
+    "order": 30
+  },
+  {
+    "id": "masonry-works",
+    "title": {
+      "pl": "Roboty murarskie",
+      "en": "Masonry works"
+    },
+    "description": {
+      "pl": "Roboty murowe i prace powiązane w ramach ustalonego zakresu.",
+      "en": "Masonry and related works within the agreed scope."
+    },
+    "featured": false,
+    "order": 40
+  }
+]

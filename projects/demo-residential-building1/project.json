@@ -1,0 +1,65 @@
+{
+  "id": "demo-residential-building1",
+  "title": {
+    "pl": "Przykładowy budynek mieszkalny",
+    "en": "Sample residential building"
+  },
+  "summary": {
+    "pl": "Przykładowy opis projektu pokazujący neutralny sposób prezentacji portfolio.",
+    "en": "Sample project description showing a neutral portfolio presentation."
+  },
+  "location": "Białystok",
+  "year": "2025",
+  "status": "completed",
+  "type": "multi-family-building",
+  "cover": "cover.jpg",
+  "role": {
+    "pl": "Wykonawca wybranego zakresu prac budowlanych",
+    "en": "Contractor for a selected scope of construction works"
+  },
+  "scopeOfWork": [
+    {
+      "pl": "Prace konstrukcyjne w ustalonym zakresie",
+      "en": "Structural works within the agreed scope"
+    },
+    {
+      "pl": "Roboty murarskie",
+      "en": "Masonry works"
+    },
+    {
+      "pl": "Wsparcie realizacji wybranych etapów budowy",
+      "en": "Support for selected construction stages"
+    }
+  ],
+  "clientDisclosure": {
+    "showClientName": false,
+    "clientType": {
+      "pl": "Developer mieszkaniowy",
+      "en": "Residential developer"
+    }
+  },
+  "description": {
+    "pl": "description.pl.md",
+    "en": "description.en.md"
+  },
+  "services": [
+    "multi-family-buildings",
+    "reinforced-concrete-works",
+    "masonry-works"
+  ],
+  "tags": [
+    "budynek-wielorodzinny",
+    "portfolio",
+    "neutralny-opis"
+  ],
+  "galleries": [
+    {
+      "id": "construction",
+      "title": {
+        "pl": "Etap budowy",
+        "en": "Construction stage"
+      },
+      "path": "galleries/construction/gallery.json"
+    }
+  ]
+}

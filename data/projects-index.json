@@ -1,0 +1,22 @@
+[
+  {
+    "id": "demo-residential-building",
+    "visible": true,
+    "featured": true,
+    "featuredOrder": 1,
+    "order": 10
+  },
+   {
+    "id": "demo-residential-building1",
+    "visible": true,
+    "featured": true,
+    "featuredOrder": 2,
+    "order": 20
+  }, 
+  {
+    "id": "template-project",
+    "visible": false,
+    "featured": false,
+    "order": 999
+  }
+]

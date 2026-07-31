@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Strona firmowa dewelopera budowlanego. Portfolio wybranych projektów, zakres prac, usługi i kontakt.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Firma budowlana - portfolio projektów">
+  <meta property="og:description" content="Wybrane projekty, zakres prac i dane kontaktowe.">
+  <title>Firma budowlana</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/themes.css">
+  <link rel="stylesheet" href="assets/css/accessibility.css">
+</head>
+<body data-page="projects">
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" data-i18n="brand.name">Firma Budowlana</a>
+      <nav class="site-nav desktop-nav" aria-label="Główna nawigacja">
+        <a href="index.html" data-i18n="nav.home">Strona główna</a>
+        <a href="realizacje.html" data-i18n="nav.projects">Portfolio</a>
+        <a href="uslugi.html" data-i18n="nav.services">Usługi</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <button class="settings-toggle" type="button" aria-label="Ustawienia strony" aria-expanded="false" aria-controls="settings-panel">⚙</button>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+    <div class="settings-panel" id="settings-panel" hidden>
+      <div class="settings-panel-inner" data-settings-root>
+        <h2 class="settings-title" data-i18n="settings.title">Ustawienia</h2>
+        <section class="settings-section" data-feature="languageSwitcher">
+          <h3 data-i18n="settings.language">Język</h3>
+          <div class="settings-actions">
+            <button class="tool-button" type="button" data-lang="pl">PL</button>
+            <button class="tool-button" type="button" data-lang="en">EN</button>
+          </div>
+        </section>
+        <section class="settings-section" data-feature="themeSwitcher">
+          <h3 data-i18n="settings.theme">Motyw</h3>
+          <div class="settings-actions">
+            <button class="tool-button" type="button" data-theme-value="light" data-i18n="settings.themeLight">Jasny</button>
+            <button class="tool-button" type="button" data-theme-value="dark" data-i18n="settings.themeDark">Ciemny</button>
+            <button class="tool-button" type="button" data-theme-value="auto" data-i18n="settings.themeAuto">Auto</button>
+          </div>
+        </section>
+        <section class="settings-section" data-feature="fontSizeSwitcher">
+          <h3 data-i18n="settings.fontSize">Rozmiar tekstu</h3>
+          <div class="settings-actions">
+            <button class="tool-button" type="button" data-font-size-value="small">A-</button>
+            <button class="tool-button" type="button" data-font-size-value="normal">A</button>
+            <button class="tool-button" type="button" data-font-size-value="large">A+</button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav class="mobile-nav" aria-label="Menu mobilne">
+        <a href="index.html" data-i18n="nav.home">Strona główna</a>
+        <a href="realizacje.html" data-i18n="nav.projects">Portfolio</a>
+        <a href="uslugi.html" data-i18n="nav.services">Usługi</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="mobile-settings-note" data-i18n="settings.mobileHint">Ustawienia dostępne są pod ikoną koła zębatego.</div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero"><div class="container"><p class="eyebrow" data-i18n="projects.eyebrow">Portfolio</p><h1 data-i18n="projects.title">Wybrane projekty</h1><p class="lead" data-i18n="projects.lead">Lista projektów z opisem roli oraz zakresu prac wykonanych przez naszą firmę.</p></div></section>
+    <section class="section"><div class="container"><div id="projects-list" class="project-grid"></div></div></section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <strong data-i18n="brand.name">Firma Budowlana</strong>
+        <p data-i18n="footer.note">Portfolio wybranych projektów i zakresu prac.</p>
+        <div class="footer-social" aria-label="Social media">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="LinkedIn">IN</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Nawigacja w stopce">
+        <h2 class="footer-title" data-i18n="footer.navigation">Nawigacja</h2>
+        <a href="index.html" data-i18n="nav.home">Strona główna</a>
+        <a href="realizacje.html" data-i18n="nav.projects">Portfolio</a>
+        <a href="uslugi.html" data-i18n="nav.services">Usługi</a>
+        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="footer-contact">
+        <h2 class="footer-title" data-i18n="footer.contact">Kontakt</h2>
+        <div id="footer-contact"></div>
+      </div>
+      <div class="footer-hours">
+        <h2 class="footer-title" data-i18n="footer.hours">Godziny pracy</h2>
+        <div id="footer-hours"></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">© 2026 <span data-i18n="brand.name">Firma Budowlana</span></div>
+  </footer>
+  <script src="assets/js/config-loader.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/font-size.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/services.js"></script>
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/project-detail.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

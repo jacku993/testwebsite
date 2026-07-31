@@ -1,0 +1,55 @@
+{
+  "id": "construction",
+  "title": {
+    "pl": "Etap budowy",
+    "en": "Construction stage"
+  },
+  "description": {
+    "pl": "Przykładowa galeria. Podmień pliki SVG na zdjęcia WebP i zaktualizuj gallery.json.",
+    "en": "Sample gallery. Replace SVG placeholders with WebP photos and update gallery.json."
+  },
+  "images": [
+    {
+      "file": "01.jpg",
+      "caption": {
+        "pl": "Przykładowe zdjęcie 1",
+        "en": "Sample photo 1"
+      }
+    },
+    {
+      "file": "02.jpg",
+      "caption": {
+        "pl": "Przykładowe zdjęcie 2",
+        "en": "Sample photo 2"
+      }
+    },
+        {
+      "file": "03.jpg",
+      "caption": {
+        "pl": "Przykładowe zdjęcie 3",
+        "en": "Sample photo 3"
+      }
+    },
+        {
+      "file": "04.jpg",
+      "caption": {
+        "pl": "Przykładowe zdjęcie 4",
+        "en": "Sample photo 4"
+      }
+    },
+        {
+      "file": "05.jpg",
+      "caption": {
+        "pl": "Przykładowe zdjęcie 5",
+        "en": "Sample photo 5"
+      }
+    },
+        {
+      "file": "06.jpg",
+      "caption": {
+        "pl": "Przykładowe zdjęcie 6",
+        "en": "Sample photo 6"
+      }
+    }
+  ]
+}

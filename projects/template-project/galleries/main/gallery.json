@@ -1,0 +1,12 @@
+{
+  "id": "main",
+  "title": {
+    "pl": "Galeria",
+    "en": "Gallery"
+  },
+  "description": {
+    "pl": "Opis galerii.",
+    "en": "Gallery description."
+  },
+  "images": []
+}

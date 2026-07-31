@@ -1,0 +1,8 @@
+body[data-font-size="small"] { --font-scale: 0.95; }
+body[data-font-size="normal"] { --font-scale: 1; }
+body[data-font-size="large"] { --font-scale: 1.15; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
